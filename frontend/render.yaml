@@ -1,0 +1,34 @@
+# Exported from Render on 2024-08-22T17:47:57Z
+services:
+- type: web
+  name: guiser
+  runtime: static
+  repo: https://github.com/ubc-cpsc455-2024S/project-02_2s_complement
+  envVars:
+  - key: VITE_THREADS_REDIRECT_URI
+    sync: false
+  - key: VITE_THREADS_APP_ID
+    sync: false
+  - key: VITE_LINKED_IN_REDIRECT_URI
+    sync: false
+  - key: VITE_LINKED_IN_CLIENT_ID
+    sync: false
+  - key: VITE_GOOGLE_GSI_SOURCE
+    sync: false
+  - key: VITE_GOOGLE_CLIENTID
+    sync: false
+  - key: VITE_BASEURL_FRONT
+    sync: false
+  - key: VITE_BASEURL_BACK_ALIAS
+    sync: false
+  - key: VITE_BASEURL_BACK
+    sync: false
+  buildCommand: npm install; npm run build
+  staticPublishPath: dist
+  routes:
+  - type: rewrite
+    source: /*
+    destination: /index.html
+  autoDeploy: false
+  rootDir: frontend
+version: "1"

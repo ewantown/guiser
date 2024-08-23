@@ -1,0 +1,50 @@
+# Exported from Render on 2024-08-22T17:48:19Z
+services:
+- type: web
+  name: guiserapi
+  runtime: node
+  repo: https://github.com/ubc-cpsc455-2024S/project-02_2s_complement
+  plan: free
+  envVars:
+  - key: TWITTER_SECRET
+    sync: false
+  - key: TWITTER_REDIRECT_URI
+    sync: false
+  - key: TWITTER_CLIENT_ID
+    sync: false
+  - key: TOGETHER_LLM
+    sync: false
+  - key: TOGETHER_API_KEY
+    sync: false
+  - key: THREADS_SECRET
+    sync: false
+  - key: THREADS_REDIRECT_URI
+    sync: false
+  - key: THREADS_GRAPH_API_BASE_URL
+    sync: false
+  - key: THREADS_APP_ID
+    sync: false
+  - key: MONGO_DB_URI
+    sync: false
+  - key: LINKED_IN_SECRET
+    sync: false
+  - key: LINKED_IN_REDIRECT_URI
+    sync: false
+  - key: LINKED_IN_CLIENT_ID
+    sync: false
+  - key: GOOGLE_CLIENTID
+    sync: false
+  - key: GOOGLE_AI_API_KEY
+    sync: false
+  - key: BASEURL_FRONT
+    sync: false
+  - key: BASEURL_BACK_ALIAS
+    sync: false
+  - key: BASEURL_BACK
+    sync: false
+  region: oregon
+  buildCommand: npm install && npm run build
+  startCommand: node dist/src/App.js
+  autoDeploy: false
+  rootDir: backend
+version: "1"
