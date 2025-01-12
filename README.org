@@ -1,0 +1,26 @@
+* Overview
+Guiser is a JavaScript/TypeScript MERN-stack web application that enables users to design multiple "personas", then generate and post social media content under the guise of a persona to associated accounts on major social media platforms. It currently (v1) supports arbitrarily many personas, each with at most one associated account on each social media platorm, and direct posting of generated content to LinkedIn, X (formerly Twitter), and Threads (Instagram's text-based sibling).
+
+* Intent
+The intent of the application was three-fold. On one hand, it is useful tool for social media marketing, enabling a single marketing professional to masquerade as numerous "organic" content creators. On the other hand, its creation was a prescient commentary on the direction of social media in the wake of widely available and programmatically accessible large language models. Finally, as a project, it provided an opportunity to work with technologies that comprise the "backbone" of modern web applications with increasing frequency. In this regard, the application has four OAuth integrations (Google, LinkedIn, Meta, Twitter/X), five external REST API integrations (LinkedIn, Meta, Twitter/X, MongoDB Atlas), and one internal REST API to handle client-server transactions.
+
+
+* Getting Started
+** Set up environment
+The dotenv NPM package is used for secrets management, and a template .env file for local development has been provided. You'll need to register as an application with the various platforms for OAuth integration, MongoDB for storage, and TogethAI for LLM integration. After registering, replace every "_____" in "template.env" with a value, and rename the file to ".env".
+
+** Build
+1. Open a shell in the project root
+2. ~cd~ to ~backend~ or one of its subdirectories
+3. Execute ~npm install~, using Node 20 or greater
+4. Execute ~npm run build~
+   
+** Run
+1. Open a shell in the project root
+2. ~cd~ to ~backend~ or one of its subdirectories
+3. Execute ~npm run build~
+4. ~cd~ to ~frontend~ or one of its subdirectories
+5. Execute ~npm run dev~
+
+* Credits
+Guiser (v1) was developed by myself and three others: Kiara Melocoton, Brant Shapka, and Shumin Wang. It was briefly deployed with Render.com for testing, but was not submitted for review to the platforms with which it integrates, and so not available for public use. Policies of these platforms were in flux, so we all parked this project and moved on to others. This repo is my personal fork.
